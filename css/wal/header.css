@@ -1,0 +1,120 @@
+/* Header (sin Bootstrap) */
+
+/* Contenedor Principal <header> */
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 145px;
+	padding: 5px 10%;
+}
+
+/* Contenedor Logo Realm <div> */
+.header .logo{margin: auto; cursor: pointer;}
+.header .logo img{height: 120px; width: auto; transition: all 0.3s;}
+.header .logo img:hover{transform: scale(1.2);}
+
+/* Navbar (sin Bootstrap) <nav> */
+.header nav{
+	max-width: 1080px;
+	margin: auto;
+	background-color: #333;
+	font-size: 20px;
+	/*margin-top: 50px;*/
+}
+
+/* Sub-Contenedor Principal <ul> */
+.header nav .menu-h{ /* Menú Horizontal */
+	list-style: none;
+	display: flex;
+	/*flex-wrap: wrap;*/
+	justify-content: space-around;
+}
+.header nav .menu-h > li > a{ /* Menú Horizontal > Lista > Enlace */
+	display: block;
+	margin: 0 30px;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+.header nav .menu-h > li:hover{ /* Menú Horizontal > Lista:OnMouse */
+	background-color: red;
+}
+
+/* Sub-Contenedor Principal <ul> */
+.header nav .menu-v{ /* Sub-Menú Vertical */
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 195px;
+	background-color: rgba(0, 0, 0, .5);
+}
+.header nav .menu-h li:hover .menu-v{ /* Menú Horiz Lista:OnMouse Sub-Menú Vertical */
+	display: block;
+}
+.header nav .menu-v li:hover{ /* Sub-Menú Vertical Lista:OnMouse */
+	background-color: turquoise;
+}
+.header nav .menu-v li a{ /* Menú Vertical > Lista Enlace */
+	display: block;
+	color: white;
+	padding: 15px 15px 15px 20px;
+	text-decoration: none;
+}
+.header audio{margin: auto;}
+
+
+/***  Responsive para Móviles  ***/
+@media only screen and (max-width: 320px){
+	.header{
+		width: 80vw;
+		height: 100%;
+		margin-left: 10%;
+		display: inline-block;
+	}
+	.header .logo{margin-top: 10px; margin-left: 10%;}
+	.header nav{max-width: 300px; margin-top: 25px;}
+	.header nav .menu-h{display: block;}
+	.header audio{margin-top: 25px; width: 60vw;}
+}
+
+@media only screen and (min-width: 321px){
+	.header{
+		width: 80vw;
+		height: 100%;
+		margin-left: 10%;
+		display: inline-block;
+	}
+	.header .logo{margin-top: 10px; margin-left: 25%;}
+	.header nav{max-width: 300px; margin-top: 25px;}
+	.header nav .menu-h{display: block;}
+	.header audio{margin: 25px 25% 0;}
+}
+
+@media only screen and (min-width: 768px){
+	.header{
+		width: initial;
+		height: 100%;
+		margin-left: initial;
+		margin: auto;
+		display: inline-block;
+	}
+	.header .logo{margin-top: 10px; margin-left: 25%;}
+	.header nav{max-width: 1080px; margin-top: 25px;}
+	.header nav .menu-h{display: flex;}
+	.header audio{margin: 25px 25% 0;}
+}
+
+@media only screen and (min-width: 1420px){
+	.header{
+		display: flex;
+		justify-content: space-between;
+		width: initial;
+		height: 145px;
+		margin: auto;
+	}
+	.header .logo{margin: auto;}
+	.header nav{max-width: 1080px; margin: auto;}
+	.header nav .menu-h{display: flex;}
+	.header audio{margin: auto; width: initial;}
+}

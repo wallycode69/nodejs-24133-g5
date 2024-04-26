@@ -1,0 +1,35 @@
+<button id="btn-abrir-modal">Abrir Modal</button>
+<dialog id="modal">
+	<h2>Acerca de...</h2>
+	<p><b class="t1">Curso:</b><span> FullStack JavaScript/Node JS Codo a Codo (2024)</span></p>
+	<p><b class="t1">TPO:</b><span> Trabajo Práctico Obligatorio</span></p>
+	<p><b class="t1">Tema:</b><span> Sitio Web para Venta de Instrumentos Musicales</span></p>
+	<hr>
+	<p class="tit"><mark><b>Grupo: 5</b></mark></p>
+	<p class="tit"><mark><b>Integrantes:</b></mark></p>
+	<hr>
+	<p class="int">1) Yanina Andregnette</p>
+	<p class="int">2) Maximiliano Segura</p>
+	<p class="int">3) Román Sola</p>
+	<p class="int">4) Walter Ustaris</p>
+	<hr>
+	<button id="btn-cerrar-modal">Cerrar</button>
+</dialog>
+
+<style type="text/css">
+	#modal{border: 8px solid #000; border-radius: 25px; background-image: url(./assets/img/g787404.jpeg); background-size: cover;}
+	#modal .t1{color: lightgreen;}
+	#modal span{color: yellow;}
+	#modal h2{text-align: center; color: lightyellow;}
+	#modal .tit{text-align: center;}
+	#modal .int{margin-left: 50px; color: yellow;}
+	#modal #btn-cerrar-modal{font-size: 30px; font-weight: 600; margin-left: 40%;}
+</style>
+
+<script type="text/javascript">
+	const btn1  = document.querySelector("#about");
+	const btn2  = document.querySelector("#btn-cerrar-modal");
+	const modal = document.querySelector("#modal");
+	btn1.addEventListener("click",()=>{modal.showModal();})
+	btn2.addEventListener("click",()=>{modal.close();})
+</script>

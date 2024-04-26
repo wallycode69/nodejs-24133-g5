@@ -1,0 +1,79 @@
+/***  Header y Footer  ***/
+
+.header, .footer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	height: 145px;
+	padding: 5px 10%;
+}
+.header .logo, .footer .logo{cursor: pointer;}
+.header .logo img, .footer .logo img{height: 120px; width: auto; transition: all 0.3s;}
+.header .logo img:hover, .footer .logo img:hover{transform: scale(1.2);}
+
+
+/***  Navbar  ***/
+
+nav{
+	max-width: 1080px;
+	margin: auto;
+	background-color: #333;
+	font-size: 20px;
+	margin-top: 50px;
+}
+.menu-h{
+	list-style: none;
+	display: flex;
+	/*flex-wrap: wrap;*/
+	justify-content: space-around;
+}
+.menu-h > li > a{
+	display: block;
+	margin: 0 30px;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+.menu-h > li:hover{background-color: red;}
+.menu-v{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 200px;
+	background-color: rgba(0, 0, 0, .5);
+}
+.menu-h li:hover .menu-v{display: block;}
+.menu-v li:hover{background-color: turquoise;}
+.menu-v li a{
+	display: block;
+	color: white;
+	padding: 15px 15px 15px 20px;
+	text-decoration: none;
+}
+
+
+/***  Footer  ***/
+
+.footer .menu-h .fa:hover, .footer .menu-h .fab:hover{
+	animation:rotate-scale-up-vertical 0.8s linear both;}
+.footer nav ul{
+	display: grid;
+	/*gap: 5px;*/
+	grid-template-columns: repeat(4, auto);
+}
+.footer p{padding-left: 20px; padding-right: 50px;}
+
+
+@media only screen and (max-width: 320px){
+	.menu-h{display: block;}
+}
+
+
+/***  Animación Logos Redes Sociales  ***/
+
+@keyframes rotate-scale-up-vertical{
+	0%{transform:scale(1) rotateY(0)}
+	50%{transform:scale(2) rotateY(180deg)}
+	100%{transform:scale(1) rotateY(360deg)}
+}

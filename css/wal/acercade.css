@@ -1,0 +1,53 @@
+/* Acerca de... (ShowModal sin Bootstrap) */
+
+/* Contenedor Principal <dialog> */
+#modal{
+	margin: auto;
+	border: 8px solid #000;
+	border-radius: 25px;
+	background-image: url(../../img/wal/g787404.jpeg);
+	background-size: cover;
+	/*z-index: 1000;*/
+}
+
+/* Título Principal <h2> (Acerca de...) */
+#modal h2{text-align: center; color: lightyellow; font-size: 2em;}
+
+/* Encabezado <p> (Curso/Comisión/TPO/Prof/Tema) */
+#modal .t1{color: lightgreen; font-size: 2em;}
+
+/* Descripción <p> (NodeJS/24133/Trab.Prác.Oblig./Nico/Vta.Instrum.Mus.) */
+#modal span{color: yellow; font-size: 2em;}
+
+/* Título/SubTítulo <p> (Grupo:5/Integrantes:) */
+#modal .tit{text-align: center; font-size: 2em;}
+
+/* Integrantes <p> (Yanina/Maximiliano/Román/Walter) */
+#modal .int{margin-left: 50px; color: yellow; font-size: 2em;}
+
+/* Botón Cerrar <button> (Cerrar Modal) */
+#modal #btn-cerrar-modal{
+	font-size: 30px;
+	font-weight: 600;
+	margin-left: 40%;
+}
+
+/* Opacidad Fondo <#modal> (background-image:) */
+#modal::backdrop{background-color: rgba(0, 0, 0, .55);}
+
+
+/***  Responsive para Móviles  ***/
+@media only screen and (max-width: 991px){
+	#modal{font-size: 0.5em;}
+	#modal #btn-cerrar-modal{font-size: 15px; font-weight: 300;}
+}
+
+@media only screen and (min-width: 992px){
+	#modal{font-size: 0.7em;}
+	#modal #btn-cerrar-modal{font-size: 18px; font-weight: 350;}
+}
+
+@media only screen and (min-width: 1200px){
+	#modal{font-size: 1em;}
+	#modal #btn-cerrar-modal{font-size: 20px; font-weight: 450;}
+}

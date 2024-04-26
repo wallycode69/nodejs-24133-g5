@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<!-- Carrousel Logos de Marcas (sin Bootstrap) -->
+	<div class="slider">
+		<div class="slider-track">
+			<div class="slide"><img src="../../img/wal/logo-1.png" alt="Logo-1"></div>
+			<div class="slide"><img src="../../img/wal/logo-2.png" alt="Logo-2"></div>
+			<div class="slide"><img src="../../img/wal/logo-3.png" alt="Logo-3"></div>
+			<div class="slide"><img src="../../img/wal/logo-4.png" alt="Logo-4"></div>
+			<div class="slide"><img src="../../img/wal/logo-5.png" alt="Logo-5"></div>
+			<div class="slide"><img src="../../img/wal/logo-6.png" alt="Logo-6"></div>
+			<div class="slide"><img src="../../img/wal/logo-7.png" alt="Logo-7"></div>
+			<div class="slide"><img src="../../img/wal/logo-1.png" alt="Logo-1"></div>
+			<div class="slide"><img src="../../img/wal/logo-2.png" alt="Logo-2"></div>
+			<div class="slide"><img src="../../img/wal/logo-3.png" alt="Logo-3"></div>
+			<div class="slide"><img src="../../img/wal/logo-4.png" alt="Logo-4"></div>
+			<div class="slide"><img src="../../img/wal/logo-5.png" alt="Logo-5"></div>
+			<div class="slide"><img src="../../img/wal/logo-6.png" alt="Logo-6"></div>
+			<div class="slide"><img src="../../img/wal/logo-7.png" alt="Logo-7"></div>
+		</div>
+	</div>
+
+	<style type="text/css">
+		.slider{width: 100vw; height: auto; margin: auto; overflow: hidden;}
+		.slider .slider-track{
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			column-gap: 20px;
+			animation: scroll 40s linear infinite;
+			-webkit-animation: scroll 40s linear infinite;
+			width: calc(200px * 14);
+		}
+		.slider .slide{width: 200px;}
+		.slider .slide img{width: 100%;}
+
+		/* Animación (Slide Automático) */
+		@keyframes scroll{
+			0%{-webkit-transform: translateX(0); transform: translateX(0);}
+			100%{-webkit-transform: translateX(calc(-200px * 7)); transform: translateX(calc(-200px * 7));}
+		}
+	</style>
+</body>
+</html>

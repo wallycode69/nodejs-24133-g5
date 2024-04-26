@@ -1,0 +1,109 @@
+/* Footer (sin Bootstrap) */
+
+/* Contenedor Principal <footer> */
+.footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 25px;
+	height: 145px;
+}
+
+/* Navbar (sin Bootstrap) <nav> */
+.footer nav{
+	max-width: 1080px;
+	margin: auto;
+	background-color: #333;
+	font-size: 20px;
+}
+
+/* Sub-Contenedor Grilla Íconos Redes Sociales <ul> */
+.footer nav .menu-h{ /* Menú Horizontal */
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+}
+.footer nav .menu-h > li > a{ /* Íconos Redes Sociales */
+	display: inline-block;
+	margin: 0 30px;
+	padding: 15px 20px;
+	width: auto;
+	color: white;
+	text-decoration: none;
+}
+.footer nav .menu-h > li:hover{ /* Íconos:OnMouseOver */
+	background-color: red;
+}
+.footer .menu-h .fa:hover, .footer .menu-h .fab:hover{ /* Íconos Animación */
+	animation:rotate-scale-up-vertical 0.8s linear both;}
+
+/* Sub-Contenedor Derechos Reservados <div> */
+.footer .ddrr{margin: auto;}
+.footer .ddrr p{padding-left: 20px; padding-right: 20px; color: orangered;}
+
+/* Sub-Contenedor Logo Color Realm <div> */
+.footer .logo{margin: auto; cursor: pointer;}
+
+/* Animación Efecto Agrandamiento Logo Color Realm  */
+.footer .logo img{height: 120px; width: auto; transition: all 0.3s;}
+.footer .logo img:hover{transform: scale(1.2);}
+
+
+/***  Responsive para Móviles  ***/
+@media only screen and (max-width: 320px){
+	.footer{width: 80vw; height: 100%; display: inline-block; margin-left: 10%;}
+	.footer nav{max-width: 300px;}
+	.footer nav .menu-h{grid-template-columns: repeat(2, auto);}
+	.footer .ddrr{margin-top: 25px;}
+	.footer .logo{
+		margin-top: 25px;
+		margin-bottom: 10px;
+		margin-left: calc((320px - 180px) / 2);
+	}
+}
+
+@media only screen and (min-width: 321px){
+	.footer{width: 80vw; height: 100%; display: inline-block; margin-left: 10%;}
+	.footer nav{max-width: 300px;}
+	.footer nav .menu-h{grid-template-columns: repeat(2, auto);}
+	.footer .ddrr{margin-top: 25px;}
+	.footer .logo{
+		margin-top: 25px;
+		margin-bottom: 10px;
+		margin-left: calc((320px - 180px) / 2);
+	}
+}
+
+@media only screen and (min-width: 600px){
+	.footer{width: 80vw; height: 100%; display: inline-block; margin-left: 10%;}
+	.footer nav{max-width: 600px;}
+	.footer nav .menu-h{grid-template-columns: repeat(4, auto);}
+	.footer .ddrr{margin-top: 25px; margin-left: calc((600px - 400px) / 2);}
+	.footer .logo{
+		margin-top: 25px;
+		margin-bottom: 10px;
+		margin-left: calc((600px - 180px) / 2);
+	}
+}
+
+@media only screen and (min-width: 1030px){
+	.footer{
+		margin: auto;
+		width: initial;
+		height: 145px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.footer nav{max-width: 1080px;}
+	.footer nav .menu-h{grid-template-columns: repeat(4, auto);}
+	.footer .ddrr{margin: auto;}
+	.footer .logo{margin: auto;}
+}
+
+
+/***  Animación Logos Redes Sociales  ***/
+@keyframes rotate-scale-up-vertical{
+	0%{transform:scale(1) rotateY(0)}
+	50%{transform:scale(2) rotateY(180deg)}
+	100%{transform:scale(1) rotateY(360deg)}
+}
